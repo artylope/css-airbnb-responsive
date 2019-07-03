@@ -1,17 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   color: #57595c;
   background-color: #edefec;
 }
 
 h1 {
   font-size: 1.5em;
-  font-weight: bold;
+  font-weight: 700;
   margin: 0;
 }
 
+.section{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 .subtitle {
-  font-size: 0.75em;
+  font-size: 1em;
   color: gray;
 }
 
@@ -22,26 +29,38 @@ h1 {
 
 .title {
   text-align: center;
+  font-size: 1.2em;
   height: 4em;
   padding-top: 2em;
 }
 
+.row{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 200px;
   background-position: center;
   background-size: cover;
   text-align: center;
   margin: 1em 0.5em;
+  max-width: 350px;
+}
+
+.location:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
 
 .location-name {
   color: white;
-  display: block;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-weight: bold;
   font-size: 1.5em;
 }
@@ -51,15 +70,16 @@ h1 {
 }
 
 .btn-further {
-  border: 1px solid gray;
+  border: 1px solid #c4c4c4;
   border-radius: 3px;
   text-align: center;
-  padding: 4px;
+  padding: 15px;
   width: 250px;
   background-color: white;
   margin: 0 auto;
   cursor: pointer;
-  font-size: 0.8em;
+  font-size: 1em;
+  font-weight: bold;
 }
 
 .btn-further:hover {
@@ -68,24 +88,63 @@ h1 {
 
 #SF {
   background-image: url('../img/san-francisco.jpg');
+  background-size: cover;
 }
 
 #NY {
   background-image: url('../img/new-york.jpg');
+  background-size: cover;
 }
 
 #London {
   background-image: url('../img/london.jpg');
+  background-size: cover;
 }
 
 #Napa {
   background-image: url('../img/napa.jpg');
+  background-size: cover;
 }
 
 #Sonoma {
   background-image: url('../img/sonoma.jpg');
+  background-size: cover;
 }
 
 #SF2 {
   background-image: url('../img/san-francisco-2.jpg');
+  background-size: cover;
 }
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .title{
+    margin-bottom: 20px;
+  }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+  .row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .location{
+    width: 33.33%;
+  }
+
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { ... }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 960px;
+    }
+ }
